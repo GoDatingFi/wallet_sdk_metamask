@@ -161,6 +161,30 @@ class EthereumWalletConnectProvider extends WalletConnectProvider {
     return result;
   }
 
+  /// Auto add chain for metamask mobile
+  Future<String> addChain({
+    required int chainId,
+    required String chainName,
+    required Object nativeCurrency,
+    required Object rpc,
+    required Object explorers,
+  }) async {
+    final result = await connector.sendCustomRequest(
+      method: 'wallet_addEthereumChain',
+      params: [
+        {
+          'chainId': chainId,
+          'chainName': chainName,
+          'nativeCurrency': nativeCurrency,
+          'rpcUrls': rpc,
+          'blockExplorerUrls': explorers
+        }
+      ],
+    );
+
+    return result;
+  }
+
   @override
   int get chainId => _chainId;
 }
