@@ -5,3 +5,9 @@
 ## 0.0.2
 
 * Add chain id for auto-add network on the Metamask by flutter
+
+
+## 0.0.3
+
+* Add detail example
+#socialFi
