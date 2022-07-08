@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:convert/convert.dart';
-import 'package:walletconnect_dart/walletconnect_dart.dart';
+
+import '../../wallet_sdk_metamask.dart';
 
 extension HexToBytes on String {
   Uint8List toUint8List() => Uint8List.fromList(hex.decode(this));

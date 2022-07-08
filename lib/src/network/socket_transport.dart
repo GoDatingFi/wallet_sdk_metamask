@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:walletconnect_dart/src/api/websocket/web_socket_message.dart';
-import 'package:walletconnect_dart/src/network/reconnecting_web_socket.dart';
-import 'package:walletconnect_dart/src/utils/event.dart';
-import 'package:walletconnect_dart/src/utils/event_bus.dart';
+import '../../wallet_sdk_metamask.dart';
+import '../utils/event.dart';
+import '../utils/event_bus.dart';
+import 'reconnecting_web_socket.dart';
+
 
 /// The transport layer used to perform JSON-RPC 2 requests.
 /// A client calls methods on a server and handles the server's responses to
