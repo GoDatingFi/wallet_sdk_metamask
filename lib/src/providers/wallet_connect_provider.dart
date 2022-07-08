@@ -1,4 +1,5 @@
-import 'package:walletconnect_dart/src/walletconnect.dart';
+
+import '../../wallet_sdk_metamask.dart';
 
 /// A generic interface that can be implemented to provide various provider
 /// implementations.

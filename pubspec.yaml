@@ -1,5 +1,5 @@
 name: wallet_sdk_metamask
-description: A new Flutter package project.
+description: Wallet connect for GoDatingFi project #socialfi #godatingfi
 version: 0.0.1
 homepage: https://godatingfi.com
 
@@ -10,11 +10,35 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
+  # WebSocket Channel
+  web_socket_channel: ^2.1.0
+
+  # UUID
+  uuid: ^3.0.5
+
+  # Cryptography
+  cryptography: ^2.0.5
+
+  # Hex
+  convert: ^3.0.1
+
+  # JSON Annotation
+  json_annotation: ^4.4.0
+
+  # Stack trace
+  stack_trace: ^1.10.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+    # JSON Serialization
+  json_serializable: ^6.1.4
+
+  # Build runner
+  build_runner: ^2.1.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,39 +1,86 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# wallet_sdk_metamask
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+We're GoDatingFi.com, A decentralized Global Platform for Dating.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Screenshots
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+<img src="https://avatars.githubusercontent.com/u/106664224?s=32&v=4" height="400em" width="225em" />
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+[Example](https://github.com/GoDatingFi/wallet_sdk_metamask/blob/master/example/lib/main.dart)
 
-```dart
-const like = 'sample';
+To use this package :
+
+* add the dependency to your [pubspec.yaml](https://github.com/GoDatingFi/wallet_sdk_metamask/blob/master/pubspec.yaml) file.
+
+```yaml
+  dependencies:
+    flutter:
+      sdk: flutter
+    wallet_sdk_metamask:
 ```
 
-## Additional information
+### How to use
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+class Test extends StatelessWidget {
+ 
+  void _showButtonPressDialog(BuildContext context, String btn) {
+    Scaffold.of(context).showSnackBar(SnackBar(
+      content: Text('$btn Button Pressed!'),
+      backgroundColor: Colors.black26,
+      duration: Duration(milliseconds: 400),
+    ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SignInButton(
+              Buttons.Google,
+              onPressed: () {
+                _showButtonPressDialog(context, 'Google');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+# License
+Copyright (c) 2020 Parth Patel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+## Getting Started
+
+For help getting started with Flutter, view our online [documentation](https://flutter.io/).
+
+For help on editing package code, view the [documentation](https://flutter.io/developing-packages/).

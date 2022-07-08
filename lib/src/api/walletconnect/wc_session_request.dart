@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:walletconnect_dart/src/session/peer_meta.dart';
+
+import '../../../wallet_sdk_metamask.dart';
 
 part 'wc_session_request.g.dart';
 
