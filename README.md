@@ -1,15 +1,16 @@
 # wallet_sdk_metamask
 
 We're GoDatingFi.com, A decentralized Global Platform for Dating.
+=> Auto-add network on the Metamask by flutter.
 
 
 ## Screenshots
 
-<img src="https://avatars.githubusercontent.com/u/106664224?s=32&v=4" height="400em" width="225em" />
+<img src="https://github.com/GoDatingFi/wallet_sdk_metamask/blob/master/example/assets/demo.JPEG" height="400em" width="225em" />
 
 ## Usage
 
-[Example](https://github.com/GoDatingFi/wallet_sdk_metamask/blob/master/example/lib/main.dart)
+[Example](https://github.com/GoDatingFi/wallet_sdk_metamask/blob/master/example/lib/pages/add_chain.dart)
 
 To use this package :
 
@@ -25,35 +26,36 @@ To use this package :
 ### How to use
 
 ```dart
-class Test extends StatelessWidget {
- 
-  void _showButtonPressDialog(BuildContext context, String btn) {
-    Scaffold.of(context).showSnackBar(SnackBar(
-      content: Text('$btn Button Pressed!'),
-      backgroundColor: Colors.black26,
-      duration: Duration(milliseconds: 400),
-    ));
-  }
+_addChain() async {
+    if (connector.connected) {
+      try {
+        Logger().d("add chain");
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SignInButton(
-              Buttons.Google,
-              onPressed: () {
-                _showButtonPressDialog(context, 'Google');
-              },
-            ),
-          ],
-        ),
-      ),
-    );
+        EthereumWalletConnectProvider provider =
+            EthereumWalletConnectProvider(connector);
+        launchUrlString(_uri, mode: LaunchMode.externalApplication);
+        var name = "Mumbai";
+        var chainId = ChainId.MATIC;
+        List<String> rpc = [
+          "https://matic-mumbai.chainstacklabs.com",
+          "https://rpc-mumbai.maticvigil.com",
+          "https://matic-testnet-archive-rpc.bwarelabs.com"
+        ];
+        var native = {"name": "MATIC", "symbol": "MATIC", "decimals": 18};
+        var explorers = ["https://mumbai.polygonscan.com"];
+
+        var response = await provider.addChain(
+            chainId: chainId,
+            chainName: name,
+            nativeCurrency: native,
+            rpc: rpc,
+            explorers: explorers);
+        Logger().i(response);
+      } catch (exp) {
+        Logger().e(exp);
+      }
+    }
   }
-}
 
 ```
 

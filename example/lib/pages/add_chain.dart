@@ -138,7 +138,7 @@ class _AddChainScreenState extends State<AddChainScreen> {
             EthereumWalletConnectProvider(connector);
         launchUrlString(_uri, mode: LaunchMode.externalApplication);
         var name = "Mumbai";
-        var chainId = 0x13881;
+        var chainId = ChainId.MATIC;
         List<String> rpc = [
           "https://matic-mumbai.chainstacklabs.com",
           "https://rpc-mumbai.maticvigil.com",
