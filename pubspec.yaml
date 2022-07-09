@@ -1,6 +1,6 @@
 name: wallet_sdk_metamask
 description: Wallet connect for GoDatingFi project. Auto-add network on the Metamask mobile by flutter
-version: 0.0.3
+version: 0.0.4
 homepage: https://godatingfi.com
 
 environment:

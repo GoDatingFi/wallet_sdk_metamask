@@ -11,3 +11,8 @@
 
 * Add detail example
 #socialFi
+
+## 0.0.4
+
+* Add pass analysis
+#socialFi
