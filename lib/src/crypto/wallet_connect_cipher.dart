@@ -5,7 +5,6 @@ import 'package:convert/convert.dart';
 import 'package:cryptography/cryptography.dart';
 
 import '../../wallet_sdk_metamask.dart';
-import 'cipher_box.dart';
 import 'encrypted_payload.dart';
 
 /// WalletConnect protocol implementation of the encryption/decryption
