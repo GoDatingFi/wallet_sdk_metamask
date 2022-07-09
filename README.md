@@ -6,7 +6,7 @@ We're GoDatingFi.com, A decentralized Global Platform for Dating.
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/GoDatingFi/wallet_sdk_metamask/master/example/assets/demo.png" height="400em" width="225em" />
+<img src="https://raw.githubusercontent.com/GoDatingFi/wallet_sdk_metamask/master/example/assets/demo_image.JPEG" height="400em" width="225em" />
 
 ## Usage
 
