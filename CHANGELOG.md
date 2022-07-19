@@ -16,3 +16,18 @@
 
 * Add pass analysis
 #socialFi
+
+## 0.0.5
+
+* Add pass analysis
+#socialFi
+
+## 0.0.6
+
+* Add pass analysis
+#socialFi
+
+## 0.0.7
+
+* Change param personal sign
+#socialFi
